@@ -1,0 +1,4 @@
+.location{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,23 @@
+<!--pages/component/list-of-city.wxml-->
+<view class="location" bindtap='_locationClick' hidden="{{list}}">
+  <text>{{currentPrev}}·{{currentNext}}</text>
+</view>
+<view style="visibility:{{list?'visible':'hidden'}}">
+  <view class="list-title">
+    <view class='title-bar'>
+      <icon type='cancel' class='back-icon' bindtap='_back'></icon>
+      <text>{{listTypeDesp[listType]}}</text>
+    </view>
+    <view class='search-view' catchtap='_searchFocus'>
+      <icon type="search" class='search-icon' />
+      <input class='search-input' bindfocus="_searchFocus" bindblur="_searchBlur"></input>
+      <button catchtap="_searchClick" class="search-btn {{focus?'search-focus':''}}" size='mini' plain> 搜索 </button>
+    </view>
+    <text class='current-select'>您当前选择的是：{{currentPrev}}·{{currentNext}}</text>
+  </view>
+  <scroll-view class='list-content' scroll-y style='height:{{list?height:0}}px'>
+    <block wx:for="{{listType==='city'?cityData:provinceData}}" wx:key="{{item.id}}">
+      <view class="data-list {{listType==='city'?item.cityName?'area':'city':''}}" bindtap='_getCityData' data-selected='{{item}}'>{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>

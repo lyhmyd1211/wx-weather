@@ -1,0 +1,73 @@
+/* pages/component/list-of-city.wxss */
+.location{
+  display: flex;
+  justify-content: center;
+}
+.list-title{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.back-icon{
+  float: left;
+}
+.title-bar{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+.search-view{
+  height: 80rpx;
+  background-color:#eee;
+  border-radius:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-select{
+  width: 100%;
+  background-color:#eee;
+  display:block;
+  margin:10px 0;
+}
+.search-input{
+  display: inline-block;
+}
+.search-btn{
+  max-height:0px;
+  opacity:0;
+  visibility: hidden;
+  margin-right: 10px;
+  border: 1px solid #fff!important;
+  border-radius:20px;
+  background: rgba(255, 255, 255, .8)!important;
+  transition: all .5s;
+}
+.search-focus{
+  max-height:30px;
+  opacity:1;
+  visibility:visible;
+  transition: all .5s;
+}
+.divide-line{
+  width: 2px;
+  border: 1px #000;
+}
+.search-icon{
+  margin-left: 10px;
+}
+.data-list{
+  display: block;
+  padding:10px;
+  border-bottom:1px solid #eee;
+}
+.area{
+  padding-left: 20px;
+}
+.city{
+  background-color: #eee;
+}
+
+
+
+
